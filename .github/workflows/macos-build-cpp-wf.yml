@@ -1,5 +1,5 @@
 
-name: "kotlin macos Building C++ Applications CI workflow"
+name: "kotlin macos building CPP Applications CI workflow"
 
 on:
   push:
@@ -14,12 +14,12 @@ jobs:
     
 
   kotlin-cpp-gradle-macos-latest:
-    name: "Building Java Applications Sample Kotlin"
+    name: "Building CPP Applications Sample Kotlin"
     runs-on: macos-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v1
-    - name: "Building Java Applications Sample Kotlin"
+    - name: "Building CPP Applications Sample Kotlin"
       run: |
           mkdir demo && cd demo
           gradle init --project-name demo --type cpp-application --dsl kotlin
@@ -35,12 +35,12 @@ jobs:
           cat app/build.gradle.kts     
 
   kotlin-cpp-gradle-macos-11:
-    name: "Building Java Applications Sample Kotlin"
+    name: "Building CPP Applications Sample Kotlin"
     runs-on: macos-11
     steps:
     - name: Checkout
       uses: actions/checkout@v1
-    - name: "Building Java Applications Sample Kotlin"
+    - name: "Building CPP Applications Sample Kotlin"
       run: |
           mkdir demo && cd demo
           gradle init --project-name demo --type cpp-application --dsl kotlin
@@ -56,12 +56,12 @@ jobs:
           cat app/build.gradle.kts          
 
   kotlin-cpp-gradle-macos-1015:
-    name: "Building Java Applications Sample Kotlin"
+    name: "Building CPP Applications Sample Kotlin"
     runs-on: macos-1015
     steps:
     - name: Checkout
       uses: actions/checkout@v1
-    - name: "Building Java Applications Sample Kotlin"
+    - name: "Building CPP Applications Sample Kotlin"
       run: |
           mkdir demo && cd demo
           gradle init --project-name demo --type cpp-application --dsl kotlin
