@@ -13,47 +13,47 @@ jobs:
 
     
 
-  kotlin-cpp-gradle-macos-latest:
-    name: "Building CPP Applications Sample Kotlin"
-    runs-on: macos-latest
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v1
-    - name: "Building CPP Applications Sample Kotlin"
-      run: |
-          mkdir demo && cd demo
-          gradle init --project-name demo --type cpp-application --dsl kotlin
-          # gradle init --project-name demo --type cpp-application --dsl kotlin --test-framework junit-jupiter
-          # gradle init --project-name demo --type cpp-application --dsl kotlin --test-framework spock
-          # gradle init --project-name demo --type cpp-application --dsl kotlin --test-framework testng
-          echo "==================Run the application=================================================================="   
-          ./gradlew run        
-          echo "==================Bundle the application=================================================================="              
-          ./gradlew build 
-          echo "==================Publish a Build Scan=================================================================="              
-          ./gradlew build --scan
-          cat app/build.gradle.kts     
+  # kotlin-cpp-gradle-macos-latest:
+  #   name: "Building CPP Applications Sample Kotlin"
+  #   runs-on: macos-latest
+  #   steps:
+  #   - name: Checkout
+  #     uses: actions/checkout@v1
+  #   - name: "Building CPP Applications Sample Kotlin"
+  #     run: |
+  #         mkdir demo && cd demo
+  #         gradle init --project-name demo --type cpp-application --dsl kotlin
+  #         # gradle init --project-name demo --type cpp-application --dsl kotlin --test-framework junit-jupiter
+  #         # gradle init --project-name demo --type cpp-application --dsl kotlin --test-framework spock
+  #         # gradle init --project-name demo --type cpp-application --dsl kotlin --test-framework testng
+  #         echo "==================Run the application=================================================================="   
+  #         ./gradlew run        
+  #         echo "==================Bundle the application=================================================================="              
+  #         ./gradlew build 
+  #         echo "==================Publish a Build Scan=================================================================="              
+  #         ./gradlew build --scan
+  #         cat app/build.gradle.kts     
 
-  kotlin-cpp-gradle-macos-11:
-    name: "Building CPP Applications Sample Kotlin"
-    runs-on: macos-11
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v1
-    - name: "Building CPP Applications Sample Kotlin"
-      run: |
-          mkdir demo && cd demo
-          gradle init --project-name demo --type cpp-application --dsl kotlin
-          # gradle init --project-name demo --type cpp-application --dsl kotlin --test-framework junit-jupiter
-          # gradle init --project-name demo --type cpp-application --dsl kotlin --test-framework spock
-          # gradle init --project-name demo --type cpp-application --dsl kotlin --test-framework testng
-          echo "==================Run the application=================================================================="   
-          ./gradlew run        
-          echo "==================Bundle the application=================================================================="              
-          ./gradlew build 
-          echo "==================Publish a Build Scan=================================================================="              
-          ./gradlew build --scan
-          cat app/build.gradle.kts          
+  # kotlin-cpp-gradle-macos-11:
+  #   name: "Building CPP Applications Sample Kotlin"
+  #   runs-on: macos-11
+  #   steps:
+  #   - name: Checkout
+  #     uses: actions/checkout@v1
+  #   - name: "Building CPP Applications Sample Kotlin"
+  #     run: |
+  #         mkdir demo && cd demo
+  #         gradle init --project-name demo --type cpp-application --dsl kotlin
+  #         # gradle init --project-name demo --type cpp-application --dsl kotlin --test-framework junit-jupiter
+  #         # gradle init --project-name demo --type cpp-application --dsl kotlin --test-framework spock
+  #         # gradle init --project-name demo --type cpp-application --dsl kotlin --test-framework testng
+  #         echo "==================Run the application=================================================================="   
+  #         ./gradlew run        
+  #         echo "==================Bundle the application=================================================================="              
+  #         ./gradlew build 
+  #         echo "==================Publish a Build Scan=================================================================="              
+  #         ./gradlew build --scan
+  #         cat app/build.gradle.kts          
 
   kotlin-cpp-gradle-macos-1015:
     name: "Building CPP Applications Sample Kotlin"
