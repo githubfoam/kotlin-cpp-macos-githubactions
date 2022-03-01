@@ -57,7 +57,7 @@ jobs:
 
   kotlin-cpp-gradle-macos-1015:
     name: "Building CPP Applications Sample Kotlin"
-    runs-on: macos-1015
+    runs-on: macos-10.15
     steps:
     - name: Checkout
       uses: actions/checkout@v1
