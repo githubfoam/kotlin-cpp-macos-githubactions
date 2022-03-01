@@ -3,9 +3,9 @@ name: "kotlin macos Building C++ Applications CI workflow"
 
 on:
   push:
-    branches: [ main ]
+    branches: [ test ]
   pull_request:
-    branches: [ main ]
+    branches: [ test ]
   schedule:
     - cron:  '0 0 1 * *' ##execution of a task in the first minute of the month
 
@@ -13,7 +13,7 @@ jobs:
 
     
 
-  kotlin-cpp-gradle-macos-latest:
+  junit-jupiter-kotlin-cpp-gradle-macos-latest:
     name: "Building Java Applications Sample Kotlin"
     runs-on: macos-latest
     steps:
@@ -22,8 +22,8 @@ jobs:
     - name: "Building Java Applications Sample Kotlin"
       run: |
           mkdir demo && cd demo
-          gradle init --project-name demo --type cpp-application --dsl kotlin
-          # gradle init --project-name demo --type cpp-application --dsl kotlin --test-framework junit-jupiter
+          # gradle init --project-name demo --type cpp-application --dsl kotlin
+          gradle init --project-name demo --type cpp-application --dsl kotlin --test-framework junit-jupiter
           # gradle init --project-name demo --type cpp-application --dsl kotlin --test-framework spock
           # gradle init --project-name demo --type cpp-application --dsl kotlin --test-framework testng
           echo "==================Run the application=================================================================="   
@@ -34,7 +34,7 @@ jobs:
           ./gradlew build --scan
           cat app/build.gradle.kts     
 
-  kotlin-cpp-gradle-macos-11:
+  spock-kotlin-cpp-gradle-macos-11:
     name: "Building Java Applications Sample Kotlin"
     runs-on: macos-11
     steps:
@@ -43,9 +43,9 @@ jobs:
     - name: "Building Java Applications Sample Kotlin"
       run: |
           mkdir demo && cd demo
-          gradle init --project-name demo --type cpp-application --dsl kotlin
+          # gradle init --project-name demo --type cpp-application --dsl kotlin
           # gradle init --project-name demo --type cpp-application --dsl kotlin --test-framework junit-jupiter
-          # gradle init --project-name demo --type cpp-application --dsl kotlin --test-framework spock
+          gradle init --project-name demo --type cpp-application --dsl kotlin --test-framework spock
           # gradle init --project-name demo --type cpp-application --dsl kotlin --test-framework testng
           echo "==================Run the application=================================================================="   
           ./gradlew run        
@@ -55,7 +55,7 @@ jobs:
           ./gradlew build --scan
           cat app/build.gradle.kts          
 
-  kotlin-cpp-gradle-macos-1015:
+  testng-kotlin-cpp-gradle-macos-1015:
     name: "Building Java Applications Sample Kotlin"
     runs-on: macos-1015
     steps:
@@ -64,10 +64,10 @@ jobs:
     - name: "Building Java Applications Sample Kotlin"
       run: |
           mkdir demo && cd demo
-          gradle init --project-name demo --type cpp-application --dsl kotlin
+          # gradle init --project-name demo --type cpp-application --dsl kotlin
           # gradle init --project-name demo --type cpp-application --dsl kotlin --test-framework junit-jupiter
           # gradle init --project-name demo --type cpp-application --dsl kotlin --test-framework spock
-          # gradle init --project-name demo --type cpp-application --dsl kotlin --test-framework testng
+          gradle init --project-name demo --type cpp-application --dsl kotlin --test-framework testng
           echo "==================Run the application=================================================================="   
           ./gradlew run        
           echo "==================Bundle the application=================================================================="              
